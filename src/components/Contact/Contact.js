@@ -1,6 +1,5 @@
 import './Contact.css'
 import logo from '../Nav/logo.svg'
-import axios from 'axios';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Footer from '../Footer/Footer'
@@ -34,8 +33,13 @@ function Contact() {
         };
 
         try {
-            const result = await axios.post(formSparkUrl, payload);
-            console.log(result);
+            const response = await fetch(formSparkUrl, {
+                method: 'POST',
+                body: JSON.stringify(payload),
+                headers: { 'Content-Type': 'application/json' }
+            });
+            if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+            console.log(response);
             setMessage({
                 text: 'Thanks for the message!',
                 color: 'red'
