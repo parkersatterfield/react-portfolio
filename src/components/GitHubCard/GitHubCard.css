@@ -1,0 +1,60 @@
+.githubCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(100%, 260px);
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.githubCard:focus-visible {
+    background: var(--surface);
+    border-color: var(--accent);
+}
+
+.githubCard strong {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.githubIdentity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.githubIdentity svg {
+    flex-shrink: 0;
+}
+
+.githubHandle {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font: 400 12px/1.6 var(--font-mono);
+    overflow-wrap: anywhere;
+}
+
+.githubArrow {
+    color: var(--accent);
+    font-size: 20px;
+    transition: transform 180ms ease;
+}
+
+.githubCard:focus-visible .githubArrow {
+    transform: translate(2px, -2px);
+}
+
+@media (hover: hover) {
+    .githubCard:hover {
+        background: var(--surface);
+        border-color: var(--accent);
+    }
+
+    .githubCard:hover .githubArrow {
+        transform: translate(2px, -2px);
+    }
+}

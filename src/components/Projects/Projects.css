@@ -1,42 +1,17 @@
-.mainContainer {
-    display: flex;
-    justify-content: center;
+.projectsSection {
+    padding-bottom: var(--space-section);
 }
 
-.workProjects {
-    display: block;
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    /* Let hover surfaces extend past the shared text edge, including the border. */
+    margin-inline: -13px;
 }
 
-.personalProjects {
-    display: block;
-}
-
-.projectContainer {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 60%;
-    margin-bottom: 30px;
-}
-
-@media screen and (min-width: 850px) {
-    <<<<<<< HEAD .projectContainer {
-        width: 60%
-    }
-
-    .workProjects,
-    .personalProjects {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .workProjects .workProjectCard,
-    .personalProjects .workProjectCard {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .projectContainer {
-        width: 85%;
+@media (max-width: 600px) {
+    .projectsGrid {
+        grid-template-columns: 1fr;
     }
 }
