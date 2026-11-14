@@ -147,7 +147,7 @@ textarea {
 }
 
 .green {
-    visibility: visibility;
+    visibility: visible;
     display: flex;
     justify-self: center;
     background-color: var(--red);

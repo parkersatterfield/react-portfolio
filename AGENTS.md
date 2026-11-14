@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This is a React 17 portfolio built with Create React App. `src/index.js` mounts the app; `src/App.js` defines routes and page transitions. Feature components live in `src/components/`, generally paired with a same-named CSS file, such as `Projects/Projects.js` and `Projects/Projects.css`. Preserve existing paths, including `Work Detail/` and `Case Study/`. Shared project images live in `src/images/`; component-specific SVGs and the resume sit alongside components. `public/` contains the HTML shell, icons, and hosting redirects. `build/` contains generated production output; make source changes in `src/` or `public/`.
+This is a React portfolio built with TypeScript and Vite. Root `index.html` loads `src/index.tsx`; `src/App.tsx` defines routes. Feature components live in `src/components/`, generally paired with a same-named CSS file, such as `Projects/Projects.tsx` and `Projects/Projects.css`. Preserve existing paths, including `Work Detail/` and `Case Study/`. Shared images live in `src/images/`; component-specific SVGs and the resume sit alongside components. `public/` contains icons and hosting redirects. `build/` is tracked, generated production output; regenerate it rather than editing it manually.
 
 ## Developer Preferences
 
@@ -13,18 +13,21 @@ This is a React 17 portfolio built with Create React App. `src/index.js` mounts 
 
 ## Build and Development Commands
 
+- Use Node.js 26 LTS, as declared in `.nvmrc` and package engines.
 - `npm ci`: install dependencies from `package-lock.json`.
 - `npm start`: run the local development server with automatic reload.
 - `npm run build`: create the optimized production bundle in `build/`.
+- `npm run typecheck` / `npm run lint`: check types and code without rewriting files.
+- `npm run preview`: serve the production build locally.
 - `npm run deploy`: build via `predeploy`, then publish `build/` using `gh-pages`. Run only when deployment is intended.
 
 ## Coding Style & Naming Conventions
 
-Use JavaScript, JSX, and function components. Name components and their files in PascalCase; use camelCase for functions, props, and state. Match the surrounding file's indentation and quote style: existing files vary between two and four spaces. Keep component styles beside their implementation and reuse existing CSS variables where practical. ESLint extends `react-app` and `react-app/jest`; no separate lint script or formatter configuration is defined.
+Use strict TypeScript, TSX, and function components. Name components and their files in PascalCase; use camelCase for functions, props, and state. Type component props and event handlers without `any`. Match surrounding indentation and quote style: existing files vary between two and four spaces. Keep styles beside components and reuse CSS variables. ESLint uses `eslint.config.js`; no formatter is configured.
 
 ## Validation Guidelines
 
-Validate changes through code review, `npm run build`, and focused manual checks. Check responsive layouts, navigation, and affected interactions for UI changes. Existing Jest and React Testing Library files remain in the repository, but do not write or run unit tests.
+Validate through code review, type checking, linting, production builds, and focused browser checks. Check responsive layouts, direct route loading, navigation, and affected interactions. Intercept contact requests instead of sending real messages. Never write or run unit tests.
 
 ## Commit & Pull Request Guidelines
 

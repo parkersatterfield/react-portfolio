@@ -56,3 +56,10 @@
     color: var(--lightGray);
     font-size: 14pt;
 }
+
+.closeMenu {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}

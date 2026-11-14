@@ -44,3 +44,10 @@ body {
 ::-webkit-scrollbar-button:end {
   display: block;
 }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
