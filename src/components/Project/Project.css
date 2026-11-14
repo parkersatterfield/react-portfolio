@@ -1,42 +1,88 @@
-.project a {
-    text-decoration: none;
-}
-
-.projectDetail img {
-    margin: 20px;
-    min-width: 30vw;
-}
-
-.workProjectCard {
-    padding: 25px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background-color: var(--lowContrast);
-    border-radius: 5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.workProjectHeader {
+.projectCard {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 12px;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    transition: background-color 180ms ease, border-color 180ms ease;
 }
 
-.workProjects h3,
-h5 {
-    margin: 2px;
+.projectCard:focus-within {
+    background: var(--surface);
+    border-color: var(--border);
 }
 
-.personalProjects h3,
-h5 {
-    margin: 2px;
+.projectIcon {
+    margin-bottom: 18px;
+    color: var(--accent);
 }
 
-.projectThumbnail {
-    width: 50px;
-    height: 50px;
+.projectCard h2 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.5;
 }
 
-.projectLink {
-    text-decoration: none;
-    color: black;
+.projectCard p {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.projectTitleLink {
+    transition: color 180ms ease;
+}
+
+.projectTitleLink::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+}
+
+.projectTitleEnd {
+    white-space: nowrap;
+}
+
+.projectArrow {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 16px;
+    transition: transform 180ms ease;
+}
+
+.projectTitleLink:focus-visible {
+    outline: none;
+}
+
+.projectTitleLink:focus-visible::after {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.projectCard:focus-within .projectTitleLink {
+    color: var(--accent);
+}
+
+.projectCard:focus-within .projectArrow {
+    transform: translate(2px, -2px);
+}
+
+@media (hover: hover) {
+    .projectCard:has(a):hover {
+        background: var(--surface);
+        border-color: var(--border);
+    }
+
+    .projectCard:hover .projectTitleLink {
+        color: var(--accent);
+    }
+
+    .projectCard:hover .projectArrow {
+        transform: translate(2px, -2px);
+    }
 }

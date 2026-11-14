@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This is a React portfolio built with TypeScript and Vite. Root `index.html` loads `src/index.tsx`; `src/App.tsx` defines routes. Feature components live in `src/components/`, generally paired with a same-named CSS file, such as `Projects/Projects.tsx` and `Projects/Projects.css`. Preserve existing paths, including `Work Detail/` and `Case Study/`. Shared images live in `src/images/`; component-specific SVGs and the resume sit alongside components. `public/` contains icons and hosting redirects. `build/` is tracked, generated production output; regenerate it rather than editing it manually.
+This is a single-page React portfolio built with TypeScript and Vite. Root `index.html` loads `src/index.tsx`; `src/App.tsx` composes the page. Sections live in `src/components/` with adjacent CSS. Project content is defined in `src/components/Projects/projectData.ts`. Shared styles and design tokens live in `src/index.css`. The canonical logo and favicon is `public/logo.svg`; `public/` also contains the manifest and hosting redirects. `build/` is tracked, generated production output; regenerate it rather than editing it manually.
 
 ## Developer Preferences
 
@@ -10,6 +10,7 @@ This is a React portfolio built with TypeScript and Vite. Root `index.html` load
 - Before adding or changing code, read and apply `$simple-engineering` and `$karpathy-guidelines`.
 - Treat code quality as equally important as the product outcome. This developer portfolio showcases engineering craftsmanship as well as the finished experience.
 - Favor clear, simple, maintainable code. Reuse existing functionality, avoid speculative abstractions, and keep changes focused on the requested work. Review each changed line for necessity and readability.
+- Use custom components and plain CSS. Keep navigation as section anchors; avoid adding UI frameworks or routing libraries for this page.
 
 ## Build and Development Commands
 
@@ -27,7 +28,7 @@ Use strict TypeScript, TSX, and function components. Name components and their f
 
 ## Validation Guidelines
 
-Validate through code review, type checking, linting, production builds, and focused browser checks. Check responsive layouts, direct route loading, navigation, and affected interactions. Intercept contact requests instead of sending real messages. Never write or run unit tests.
+Validate through code review, type checking, linting, production builds, and focused browser checks. Check responsive layouts, direct route loading, navigation, and affected interactions. Never write or run unit tests.
 
 ## Commit & Pull Request Guidelines
 

@@ -1,93 +1,15 @@
-import './Projects.css'
 import Project from '../Project/Project';
-import Footer from '../Footer/Footer'
-
-// Thumbnails
-import ebscoThumbnail from '../../images/EBSCOThumb.png';
-import fieldsterThumbNail from '../../images/FieldsterThumb.png';
-import navThumbNail from '../../images/NavThumb.png';
-import xmlToSqlThumbNail from '../../images/XMLtoSQLThumb.png';
-import strikeThumbNail from '../../images/StrikeThumb.png';
-import multiLangThumbNail from '../../images/MultiLangThumb.png';
-
-// Project Links
-const navCliLink = "/project/navCli"
-const strikeLink = "/casestudy/strike"
-const xmltosqlLink = "/project/xmltosql"
-
-const fieldsterProjectDescription = "This feature spins up a new environment and database for the trial customer to allow them to import their own data and use the Fieldster CRM as if they were a customer. It integrates with the sales pipeline to improve conversion."
-
-const holdingsIqProjectDescription = "One way EBSCO leverages their vast knowledge-base of data is to provide APIs that customers can use to manage their data and implement their own solutions. Many of these endpoints are driven by services that my team and I manage."
+import { projects } from './projectData';
+import './Projects.css';
 
 function Projects() {
-
     return (
-        <div className="myWorkContainer">
-            <div className="mainContainer">
-                <div className='projectContainer'>
-                    <h1>For Work 💼</h1>
-                    <p>
-                        I am passionate about designing and building performant and attractive <b>software products</b> that improve the lives of their users. Through my years of software development, I have been fortunate to work on a lot of cool projects ranging from simple <b>APIs</b> to <b>search engines</b> to <b>machine learning</b> to <b>cloud infrastructure</b>.
-                    </p>
-                    <div className='workProjects'>
-                        <Project
-                            projectName='Free Trial Automation'
-                            projectThumbnail={fieldsterThumbNail}
-                            projectLink='https://trial.key7app.com/'
-                            projectOwner='Fieldster'
-                            projectTime='2021'
-                            projectDescription={fieldsterProjectDescription}
-                        />
-                        <Project
-                            projectName='HoldingsIQ API'
-                            projectThumbnail={ebscoThumbnail}
-                            projectLink='https://developer.ebsco.com/knowledge-services/holdingsiq/reference'
-                            projectOwner='EBSCO'
-                            projectTime='2022-Present'
-                            projectDescription={holdingsIqProjectDescription}
-                        />
-                    </div>
-                    <h1>For Fun 🦩</h1>
-                    <p>Here are some projects I did in my free time. For a full list, check out my <a href="https://github.com/parkersatterfield" target='_blank' rel='noreferrer'>GitHub</a>.</p>
-                    <div className='personalProjects'>
-                        <Project
-                            projectName='Nav-CLI'
-                            projectThumbnail={navThumbNail}
-                            projectLink={navCliLink}
-                            projectOwner='Parker Satterfield'
-                            projectTime='2021'
-                            projectDescription='Developer tool to improve file system navigation through the command line.'
-                        />
-                        <Project
-                            projectName='XML to SQL'
-                            projectThumbnail={xmlToSqlThumbNail}
-                            projectLink={xmltosqlLink}
-                            projectOwner='Parker Satterfield'
-                            projectTime='2021'
-                            projectDescription='Data transformation tool to safely and freely export XML files into SQL tables.'
-                        />
-                        <Project
-                            projectName='Strike'
-                            projectThumbnail={strikeThumbNail}
-                            projectLink={strikeLink}
-                            projectOwner='Parker Satterfield'
-                            projectTime='2022'
-                            projectDescription='Product concept for a social media golfing mobile app.'
-                        />
-                        <Project
-                            projectName='MultiLang 🚧'
-                            projectThumbnail={multiLangThumbNail}
-                            projectLink="https://github.com/parkersatterfield/multilang/blob/main/multilang.ipynb"
-                            projectOwner='Parker Satterfield'
-                            projectTime='2024'
-                            projectDescription='Multi-label text classification model for identifying all languages within a string.'
-                        />
-                    </div>
-                </div>
-            </div >
-            <Footer />
-        </div >
-    )
+        <section className="projectsSection" id="projects" aria-label="Projects">
+            <div className="projectsGrid">
+                {projects.map(project => <Project key={project.name} project={project} />)}
+            </div>
+        </section>
+    );
 }
 
 export default Projects;

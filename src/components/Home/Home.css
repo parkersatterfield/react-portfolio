@@ -1,114 +1,82 @@
-* {
-    font-family: 'Barlow', sans-serif;
+.intro {
+    padding-block: 100px 48px;
 }
 
-.home {
+.introIdentity {
     display: flex;
-    width: 60%;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    gap: 28px;
 }
 
-.myWorkButton {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--blue);
-    font-family: 'Barlow', sans-serif;
-    font-size: 12pt;
-    color: whitesmoke;
-    border-style: none;
-    border-radius: 5px;
-    padding: 10px 30px 10px 30px;
-    transition: 0.5s;
+.introLogo {
+    width: 72px;
+    height: auto;
+    flex-shrink: 0;
 }
 
-.myWorkButton:hover {
-    background-color: var(--blueHover);
-    color: var(--light)
-}
-
-.home span {
+.intro h1 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.15;
+    letter-spacing: -0.055em;
     font-weight: 600;
-    color: var(--darkGray);
-    font-size: 76pt;
-    margin: 0;
-    padding: 0;
 }
 
-.home h2 {
-    color: var(--darkGray);
-    font-weight: 500;
-    font-size: 32pt;
+.intro h1 span {
+    color: var(--accent);
 }
 
-.socials {
-    display: flex;
+.introDetails {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 64px;
+    margin-top: 36px;
 }
 
-.socials a {
-    color: var(--blueHover);
-    background-color: var(--lowContrast);
-    border-radius: 50%;
-    ;
-    margin: 0 15px 20px 0;
-    padding: 10px;
-    text-decoration: none;
-    transition: ease-in-out 0.3s;
+.introDescription {
+    max-width: 580px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--muted);
 }
 
-.socials a:hover {
-    background-color: var(--blueHover);
-    color: var(--lowContrast);
-}
-
-.bg {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-@media screen and (max-width: 1000px) {
-    .home span {
-        font-size: 62px;
+@media (max-width: 760px) {
+    .intro {
+        padding-block: 64px 48px;
     }
 
-    .bg {
-        background-position: center;
-        background-size: 60vh;
+    .introIdentity {
+        gap: 20px;
     }
 
-    .home h2 {
-        font-size: 24pt;
+    .introLogo {
+        width: 56px;
     }
 
-    .homeBottom {
-        display: block;
+    .introDetails {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 28px;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .bg {
-        background-position: center;
-        background-size: 60vh;
+@media (max-width: 480px) {
+    .intro {
+        padding-top: 48px;
     }
 
-    .home span {
-        font-size: 54px;
-    }
-
-    .bg {
-        background-position: center;
-        background-size: 60vh;
-    }
-
-    .home h2 {
-        font-size: 24pt;
-    }
-
-    .home {
+    .introIdentity {
+        flex-direction: column;
         align-items: flex-start;
-        width: 85%;
+        gap: 24px;
+    }
+
+    .intro h1 {
+        max-width: 340px;
+        font-size: 44px;
+    }
+
+    .introDescription {
+        font-size: 16px;
     }
 }

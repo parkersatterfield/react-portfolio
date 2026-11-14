@@ -1,29 +1,30 @@
+import type { PortfolioProject } from '../Projects/projectData';
+import ProjectIcon from './ProjectIcon';
 import './Project.css';
 
 interface ProjectProps {
-    projectName: string;
-    projectLink: string;
-    projectThumbnail: string;
-    projectOwner: string;
-    projectTime: string;
-    projectDescription: string;
+    project: PortfolioProject;
 }
 
-function Project(props: ProjectProps) {
+function Project({ project }: ProjectProps) {
+    const lastWordStart = project.name.lastIndexOf(' ') + 1;
+
     return (
-        <div className=" project" >
-            <div className='workProjectCard' >
-                <div className='workProjectHeader'>
-                    <div>
-                        <h3 ><a className='projectLink' href={props.projectLink}>{props.projectName} →</a></h3>
-                        <h5>{props.projectOwner} | {props.projectTime}</h5>
-                    </div>
-                    <img className='projectThumbnail' src={props.projectThumbnail} alt={props.projectName}></img>
-                </div>
-                <p>{props.projectDescription}</p>
-            </div >
-        </div >
-    )
+        <article className="projectCard">
+            <ProjectIcon name={project.icon} />
+            <h2>
+                {project.link ? (
+                    <a className="projectTitleLink" href={project.link.href} target="_blank" rel="noreferrer">
+                        {project.name.slice(0, lastWordStart)}
+                        <span className="projectTitleEnd">
+                            {project.name.slice(lastWordStart)}<span className="projectArrow" aria-hidden="true">↗</span>
+                        </span>
+                    </a>
+                ) : project.name}
+            </h2>
+            <p>{project.description}</p>
+        </article>
+    );
 }
 
 export default Project;

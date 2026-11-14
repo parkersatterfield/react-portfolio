@@ -2,21 +2,11 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <footer className="footerContainer">
-            <div className="footerLinks">
-                <div>
-                    <a aria-label="GitHub" className="fa fa-github" href="https://github.com/parkersatterfield" target="_blank" rel="noreferrer"> </a>
-                </div>
-                <div>
-                    <a aria-label="LinkedIn" className="fa fa-linkedin"href="https://www.linkedin.com/in/parker-satterfield-22313b160/" target="_blank" rel="noreferrer"> </a>
-                </div>
-                <div>
-                    <a aria-label="Instagram" className="fa fa-instagram" href="https://www.instagram.com/parker_satterfield/" target="_blank" rel="noreferrer"> </a>
-                </div>
-            </div>
-            <p>© All Rights Reserved</p>
+        <footer className="siteFooter">
+            <p>© {new Date().getFullYear()} Parker Satterfield</p>
+            <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
         </footer>
-    )
+    );
 }
 
 export default Footer;

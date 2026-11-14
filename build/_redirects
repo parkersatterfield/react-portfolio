@@ -1,1 +1,5 @@
-/* /index.html 200
+/projects        /#projects  301
+/contact         /#github   301
+/project/*       /#projects  301
+/casestudy/*     /#projects  301
+/*               /index.html 200
