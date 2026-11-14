@@ -62,6 +62,11 @@ h1, h2, h3, p {
     margin-inline: auto;
 }
 
+/* Anchor destinations receive focus without outlining the whole page. */
+.siteShell:focus, main:focus {
+    outline: none;
+}
+
 section {
     scroll-margin-top: 32px;
 }

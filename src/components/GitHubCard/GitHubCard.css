@@ -10,7 +10,7 @@
     transition: background-color 180ms ease, border-color 180ms ease;
 }
 
-.githubCard:hover, .githubCard:focus-visible {
+.githubCard:focus-visible {
     background: var(--surface);
     border-color: var(--accent);
 }
@@ -44,6 +44,17 @@
     transition: transform 180ms ease;
 }
 
-.githubCard:hover .githubArrow, .githubCard:focus-visible .githubArrow {
+.githubCard:focus-visible .githubArrow {
     transform: translate(2px, -2px);
+}
+
+@media (hover: hover) {
+    .githubCard:hover {
+        background: var(--surface);
+        border-color: var(--accent);
+    }
+
+    .githubCard:hover .githubArrow {
+        transform: translate(2px, -2px);
+    }
 }

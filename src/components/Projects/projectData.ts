@@ -4,24 +4,28 @@ export interface PortfolioProject {
     name: string;
     description: string;
     icon: ProjectIconName;
+    company?: string;
     link?: { href: string };
 }
 
 export const projects: PortfolioProject[] = [
     {
         name: 'EBSCO Scholarly Graph (ESG)',
+        company: 'EBSCO',
         icon: 'graph',
         description: 'ETL pipelines, data lake infrastructure, and graph databases powering EBSCO’s Scholarly Graph.',
         link: { href: 'https://connect.ebsco.com/s/article/What-is-the-EBSCO-Scholarly-Graph?language=en_US' },
     },
     {
         name: 'HoldingsIQ API',
+        company: 'EBSCO',
         icon: 'api',
         description: 'Backend services powering EBSCO’s knowledge-base APIs, helping customers manage holdings data and build integrations.',
         link: { href: 'https://developer.ebsco.com/knowledge-services/holdingsiq/reference' },
     },
     {
         name: 'Free Trial Automation',
+        company: 'Fieldster',
         icon: 'cloud',
         description: 'Automated provisioning of Fieldster trial environments and databases so prospective customers can explore the CRM with their own data.',
         link: { href: 'https://trial.key7app.com/' },

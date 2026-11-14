@@ -17,6 +17,12 @@
     min-height: 44px;
 }
 
-.siteFooter a:hover, .siteFooter span {
+.siteFooter a:focus-visible, .siteFooter span {
     color: var(--accent);
+}
+
+@media (hover: hover) {
+    .siteFooter a:hover {
+        color: var(--accent);
+    }
 }

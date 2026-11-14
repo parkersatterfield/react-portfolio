@@ -9,7 +9,7 @@ function Home() {
                 <h1 id="intro-title">Parker Satterfield<span>.</span></h1>
             </div>
             <div className="introDetails">
-                <p className="introDescription">I build web services and data systems, with a focus on AWS infrastructure, databases, and systems design.</p>
+                <p className="introDescription">Senior engineer at EBSCO Information Services, building cloud systems and services that advance research and make knowledge easier to discover and share.</p>
                 <GitHubCard />
             </div>
         </section>
