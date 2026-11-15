@@ -10,14 +10,6 @@
     min-width: 0;
 }
 
-.introRole {
-    margin-bottom: 16px;
-    color: var(--accent);
-    font: 500 12px/1.5 var(--font-mono);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
 .introLogo {
     width: 100%;
     height: 100%;

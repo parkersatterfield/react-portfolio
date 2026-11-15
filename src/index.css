@@ -63,8 +63,8 @@ h1, h2, h3, p {
     margin-inline: auto;
 }
 
-/* Anchor destinations receive focus without outlining the whole page. */
-.siteShell:focus, main:focus {
+/* The skip-link destination receives focus without outlining the whole page. */
+main:focus {
     outline: none;
 }
 

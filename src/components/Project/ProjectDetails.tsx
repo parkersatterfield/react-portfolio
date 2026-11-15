@@ -20,9 +20,15 @@ function ProjectDetails({ project, onClose }: { project: PortfolioProject; onClo
     }, []);
 
     return (
-        <dialog className="projectDetails" ref={dialogRef} aria-labelledby="project-details-title" onClose={onClose} onClick={event => {
-            if (event.target === event.currentTarget) event.currentTarget.close();
-        }}>
+        <dialog
+            className="projectDetails"
+            ref={dialogRef}
+            aria-labelledby="project-details-title"
+            onClose={onClose}
+            onClick={event => {
+                if (event.target === event.currentTarget) event.currentTarget.close();
+            }}
+        >
             <div className="projectDetailsHeader">
                 <button className="projectDetailsClose" type="button" aria-label="Close project details" onClick={() => dialogRef.current?.close()} autoFocus>
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true" focusable="false">
@@ -39,7 +45,7 @@ function ProjectDetails({ project, onClose }: { project: PortfolioProject; onClo
                     {project.technologies.map(technology => <li key={technology}>{technology}</li>)}
                 </ul>
                 {project.link && (
-                    <a className="projectDetailsLink" href={project.link.href} target="_blank" rel="noreferrer">
+                    <a className="projectDetailsLink" href={project.link} target="_blank" rel="noreferrer">
                         Visit project <LinkArrow />
                     </a>
                 )}

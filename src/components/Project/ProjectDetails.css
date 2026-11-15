@@ -48,11 +48,6 @@
     color: var(--text);
 }
 
-.projectDetails .projectEyebrow {
-    display: block;
-    margin-bottom: 12px;
-}
-
 .projectDetails h2 {
     font-size: clamp(24px, 4vw, 32px);
     line-height: 1.25;
