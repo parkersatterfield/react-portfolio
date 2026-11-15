@@ -18,7 +18,10 @@ function Project({ project, onSelect }: ProjectProps) {
                 </button>
             </h2>
             {project.company && <ProjectCompany company={project.company} />}
-            <p>{project.description}</p>
+            <p>
+                <span className={project.mobileDescription ? 'projectDescriptionDesktop' : undefined}>{project.description}</span>
+                {project.mobileDescription && <span className="projectDescriptionMobile">{project.mobileDescription}</span>}
+            </p>
         </article>
     );
 }

@@ -23,12 +23,14 @@ function ProjectDetails({ project, onClose }: { project: PortfolioProject; onClo
         <dialog className="projectDetails" ref={dialogRef} aria-labelledby="project-details-title" onClose={onClose} onClick={event => {
             if (event.target === event.currentTarget) event.currentTarget.close();
         }}>
-            <article className="projectDetailsContent">
+            <div className="projectDetailsHeader">
                 <button className="projectDetailsClose" type="button" aria-label="Close project details" onClick={() => dialogRef.current?.close()} autoFocus>
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden="true" focusable="false">
                         <path d="m6 6 12 12M6 18 18 6" />
                     </svg>
                 </button>
+            </div>
+            <article className="projectDetailsContent">
                 <ProjectIcon name={project.icon} />
                 <h2 id="project-details-title">{project.name}</h2>
                 {project.company && <ProjectCompany company={project.company} />}

@@ -42,6 +42,20 @@
     font: 400 12px/1.5 var(--font-mono);
 }
 
+.projectDescriptionMobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .projectDescriptionDesktop {
+        display: none;
+    }
+
+    .projectDescriptionMobile {
+        display: inline;
+    }
+}
+
 .projectTitleLink {
     min-height: 44px;
     padding: 0;

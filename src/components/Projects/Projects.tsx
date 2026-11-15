@@ -9,7 +9,7 @@ function Projects() {
 
     return (
         <section className="projectsSection" id="projects" aria-label="Projects">
-            <p className="projectsDivider">WORK</p>
+            <p className="projectsDivider">work</p>
             <div className="projectsGrid">
                 {projects.map(project => <Project key={project.name} project={project} onSelect={setSelectedProject} />)}
             </div>

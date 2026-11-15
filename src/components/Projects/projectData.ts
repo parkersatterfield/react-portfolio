@@ -3,6 +3,7 @@ import type { ProjectIconName } from '../Project/ProjectIcon';
 export interface PortfolioProject {
     name: string;
     description: string;
+    mobileDescription?: string;
     details: string;
     technologies: string[];
     featured?: boolean;
@@ -20,6 +21,7 @@ export const projects: PortfolioProject[] = [
         company: 'EBSCO',
         icon: 'graph',
         description: esgDescription,
+        mobileDescription: 'One of the tech leads for EBSCO’s Scholarly Graph, connecting scholarly works, authors, and organizations to help researchers discover related research. Built with ETL pipelines, Apache Iceberg, graph databases, and AWS.',
         details: esgDescription,
         technologies: ['ETL', 'Data lake', 'Apache Iceberg', 'Graph databases', 'AWS'],
         link: { href: 'https://about.ebsco.com/news-center/press-releases/ebsco-information-services-expands-linked-data-capabilities-with-ebsco-scholarly-graph' },
