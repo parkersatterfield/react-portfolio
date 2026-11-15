@@ -7,7 +7,7 @@
     border-top: 1px solid var(--border);
     padding-block: 28px;
     color: var(--muted);
-    font: 400 11px/1.6 var(--font-mono);
+    font: 400 12px/1.6 var(--font-mono);
 }
 
 .siteFooter a {
@@ -15,9 +15,10 @@
     align-items: center;
     gap: 12px;
     min-height: 44px;
+    font-weight: 500;
 }
 
-.siteFooter a:focus-visible, .siteFooter span {
+.siteFooter a:focus-visible, .siteFooter svg {
     color: var(--accent);
 }
 

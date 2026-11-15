@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="siteShell" id="top" tabIndex={-1}>
+    <div className="siteShell">
       <a className="skipLink" href="#main">Skip to content</a>
       <main id="main" tabIndex={-1}>
         <Home />
