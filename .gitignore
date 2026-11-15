@@ -3,4 +3,4 @@
 .npm-cache/
 .tools/
 *.tsbuildinfo
-/build
+/build/

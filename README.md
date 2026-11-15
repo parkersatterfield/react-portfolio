@@ -34,7 +34,7 @@ Do not write or run unit tests in this repository. Validate changes through type
 - `src/components/` contains the page sections and project-card component with adjacent CSS. Edit project entries in `src/components/Projects/projectData.ts`; omit `link` for projects without a public URL.
 - `src/index.css` defines shared design tokens, typography, focus styles, and basic controls.
 - `public/logo.svg` is the canonical logo and favicon. `public/` also contains the manifest, robots file, and hosting redirects.
-- `build/` remains the production output and is tracked to preserve the repository's existing convention. Regenerate it after source changes; do not edit it manually.
+- `build/` is generated production output and is ignored by Git. Generate it with `npm run build` for validation or deployment; do not edit or commit it.
 
 Netlify builds with `npm run build` and publishes `build/`. Its `_redirects` file sends `/projects`, `/project/*`, and `/casestudy/*` to `/#projects`, and `/contact` to `/#github`, before the HTML fallback. `static.json` retains its `build/` root and fallback. Netlify redirects are hosting rules, so Vite's local servers serve the main page at old paths without applying those redirects. Other hosts require equivalent redirect rules. No deployment occurs during local builds.
 

@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This is a single-page React portfolio built with TypeScript and Vite. Root `index.html` loads `src/index.tsx`; `src/App.tsx` composes the page. Sections live in `src/components/` with adjacent CSS. Project content is defined in `src/components/Projects/projectData.ts`. Shared styles and design tokens live in `src/index.css`. The canonical logo and favicon is `public/logo.svg`; `public/` also contains the manifest and hosting redirects. `build/` is tracked, generated production output; regenerate it rather than editing it manually.
+This is a single-page React portfolio built with TypeScript and Vite. Root `index.html` loads `src/index.tsx`; `src/App.tsx` composes the page. Sections live in `src/components/` with adjacent CSS. Project content is defined in `src/components/Projects/projectData.ts`. Shared styles and design tokens live in `src/index.css`. The canonical logo and favicon is `public/logo.svg`; `public/` also contains the manifest and hosting redirects. `build/` is generated production output and is ignored by Git. Generate it with `npm run build` for validation or deployment; do not edit or commit it.
 
 ## Developer Preferences
 
