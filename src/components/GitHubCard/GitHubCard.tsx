@@ -1,3 +1,4 @@
+import LinkArrow from '../LinkArrow';
 import './GitHubCard.css';
 
 function GitHubCard() {
@@ -12,7 +13,7 @@ function GitHubCard() {
                     <span className="githubHandle">@parkersatterfield</span>
                 </span>
             </span>
-            <span className="githubArrow" aria-hidden="true">↗</span>
+            <LinkArrow className="githubArrow" />
         </a>
     );
 }
